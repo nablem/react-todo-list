@@ -24,6 +24,58 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+     <style>
+        h1 {
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100%;
+        }
+        .active {
+            background-color: pink !important;
+            border: none !important;
+        }
+        .brief {
+            display: inline-block;
+        }
+        .list-group {
+            width:  32rem;
+        }
+        .btn {
+            cursor: pointer;
+            right: 0;
+            top: 0;
+            position: absolute;
+            height: 100%;
+        }
+        @keyframes rotating {
+            from {
+                transform: rotate(-20deg) translate(-5px, -5px);
+            }
+            to {
+                transform: rotate(20deg) translate(5, 0px);
+
+            }
+        }
+        .btn:hover {
+            animation: rotating 0.5s alternate infinite;
+            /* animation: rotating 1s linear infinite; */
+        }
+        #container {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .todo {
+            transition: all 0.4s ease-out;
+        }
+        .todo:hover {
+            scale: 1.1;
+        }
+    </style>
     <title>React App</title>
   </head>
   <body>
@@ -39,5 +91,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  </div>
   </body>
 </html>
